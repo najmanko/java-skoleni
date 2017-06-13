@@ -1,0 +1,8 @@
+CREATE TABLE STUDENT (
+         ID           NUMBER(5) PRIMARY KEY,
+         FIRST_NAME   VARCHAR2(15) NOT NULL,
+         LAST_NAME    VARCHAR2(20) NOT NULL,
+         AGE          NUMBER(3)
+         );
+
+INSERT INTO 
