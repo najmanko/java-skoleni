@@ -1,4 +1,4 @@
-package ada.course.loops;
+package cz.adastra.loops;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

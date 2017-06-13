@@ -1,4 +1,4 @@
-package ada.course.jdbc;
+package cz.adastra.jdbc;
 
 import java.sql.*;
 

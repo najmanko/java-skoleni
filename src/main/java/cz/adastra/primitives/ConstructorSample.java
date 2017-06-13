@@ -1,4 +1,4 @@
-package ada.course.primitives;
+package cz.adastra.primitives;
 
 public class ConstructorSample {
 }

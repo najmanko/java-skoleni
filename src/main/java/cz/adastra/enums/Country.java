@@ -1,4 +1,4 @@
-package ada.course.enums;
+package cz.adastra.enums;
 
 public enum Country {
     CZECH_REPUBLIC(52),

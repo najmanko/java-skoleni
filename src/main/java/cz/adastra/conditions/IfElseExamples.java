@@ -1,4 +1,4 @@
-package ada.course.conditions;
+package cz.adastra.conditions;
 
 public class IfElseExamples {
 }

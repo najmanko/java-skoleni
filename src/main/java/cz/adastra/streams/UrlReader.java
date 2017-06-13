@@ -1,4 +1,4 @@
-package ada.course.streams;
+package cz.adastra.streams;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

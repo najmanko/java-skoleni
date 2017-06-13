@@ -1,4 +1,4 @@
-package ada.course.oop;
+package cz.adastra.oop;
 
 public class EncapsulationSample {
 }

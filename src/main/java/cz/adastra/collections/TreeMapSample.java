@@ -1,4 +1,4 @@
-package ada.course.collections;
+package cz.adastra.collections;
 
 import java.util.Comparator;
 import java.util.Map;
@@ -17,13 +17,13 @@ public class TreeMapSample {
     }
 
     private void simpleTreeMap() {
-        Map<Integer, String> map = new TreeMap<>();
+        Map<Integer, String> map = new TreeMap<Integer, String>();
         fillMap(map);
         printMap(map);
     }
 
     private void backwardTreeMap() {
-        Map<Integer, String> map = new TreeMap<>(new Comparator<Integer>() { //lambda here!
+        Map<Integer, String> map = new TreeMap<Integer, String>(new Comparator<Integer>() { //lambda here!
             @Override
             public int compare(Integer o1, Integer o2) {
                 return o2.compareTo(o1);

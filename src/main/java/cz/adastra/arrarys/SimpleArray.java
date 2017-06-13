@@ -1,4 +1,4 @@
-package ada.course.arrarys;
+package cz.adastra.arrarys;
 
 import java.util.Random;
 

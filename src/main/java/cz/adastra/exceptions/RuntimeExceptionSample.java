@@ -1,4 +1,4 @@
-package ada.course.exceptions;
+package cz.adastra.exceptions;
 
 public class RuntimeExceptionSample {
 }

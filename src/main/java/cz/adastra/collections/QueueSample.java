@@ -1,4 +1,4 @@
-package ada.course.collections;
+package cz.adastra.collections;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -6,7 +6,7 @@ import java.util.Queue;
 public class QueueSample {
 
     public static void main(String[] args) {
-        Queue<Integer> queue = new PriorityQueue<>();
+        Queue<Integer> queue = new PriorityQueue<Integer>();
         queue.add(1);
         queue.add(4);
         queue.add(3);

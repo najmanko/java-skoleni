@@ -1,4 +1,4 @@
-package ada.course.operators;
+package cz.adastra.operators;
 
 public class Increment {
 

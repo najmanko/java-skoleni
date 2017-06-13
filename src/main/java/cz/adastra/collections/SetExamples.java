@@ -1,4 +1,4 @@
-package ada.course.collections;
+package cz.adastra.collections;
 
 public class SetExamples {
 }

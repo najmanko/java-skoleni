@@ -1,4 +1,4 @@
-package ada.course.threads;
+package cz.adastra.threads;
 
 class RunnableDemo implements Runnable {
     private Thread t;
