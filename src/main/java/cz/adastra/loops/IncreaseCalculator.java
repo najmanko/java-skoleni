@@ -22,6 +22,6 @@ public class IncreaseCalculator {
             calculator.amount = calculator.amount.add(change);
         }
         
-        System.out.println("Zustatek: " + calculator.amount);
+        System.out.println("Amount: " + calculator.amount);
     }
 }

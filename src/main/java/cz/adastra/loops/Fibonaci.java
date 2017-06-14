@@ -18,20 +18,18 @@ public class Fibonaci {
         int number = 30;
         
         long time = System.currentTimeMillis();
-        System.out.println(number + ". fibonaciho cislo je: " +
+        System.out.println(number + ". fibonaci number is: " +
                 fibonaci.fibonacciRek(number));
 
         long took = System.currentTimeMillis() - time;
         System.out.println("fibonacciRek took " + took + " miliseconds.");
 
         time = System.currentTimeMillis();
-        System.out.println(number + ". fibonaciho cislo je: " +
+        System.out.println(number + ". fibonaciho number is: " +
                 fibonaci.fibonacciForLoop(number));
 
         took = System.currentTimeMillis() - time;
         System.out.println("fibonacciForLoop took " + took + " miliseconds.");
-        
-        
     }
 
     private int fibonacciRek(int index) {

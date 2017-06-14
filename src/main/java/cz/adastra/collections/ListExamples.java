@@ -15,12 +15,12 @@ public class ListExamples {
     private void oldUseOfListUnderJava5() {
         List arrayList = new ArrayList();
         arrayList.add(7);
-        arrayList.add("Ahoj");
+        arrayList.add("Hi!");
         arrayList.add(false);
 
         for (int i = 0; i < arrayList.size(); i++) {
             Object o = arrayList.get(i);
-            System.out.print("Nasel jsem ");
+            System.out.print("I found ");
             if (o instanceof Integer) {
                 int number = (Integer)o;
                 System.out.println("Integer: " + number);
@@ -43,7 +43,7 @@ public class ListExamples {
         integerList.add(Integer.MAX_VALUE);
 
         for (Integer i : integerList) {
-            System.out.println("Cislo: " + i);
+            System.out.println("Number: " + i);
         }
     }
 }

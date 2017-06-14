@@ -7,7 +7,7 @@ public class BreakLoopExample {
         
         example.breakLoop();
 
-        System.out.println("Konec prikladu");
+        System.out.println("End of class");
     }
 
     private void breakLoop() {
@@ -16,12 +16,12 @@ public class BreakLoopExample {
             if (i % 2 == 0) {
                 continue;
             }
-            System.out.println("Liche: " + i);
+            System.out.println("Odd: " + i);
             if (i == 5) {
                 break;
             }
         }
 
-        System.out.println("Konec cyklu.");
+        System.out.println("End of loop.");
     }
 }

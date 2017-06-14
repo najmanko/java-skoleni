@@ -1,10 +1,10 @@
 package cz.adastra.oop.inheritance;
 
-public class Ctverec {
+public class Square {
 
     public int a;
 
-    public int getPovrch() {
+    public int getSurface() {
         return a * a;
     }
 }

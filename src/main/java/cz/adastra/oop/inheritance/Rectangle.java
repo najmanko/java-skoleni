@@ -1,11 +1,11 @@
 package cz.adastra.oop.inheritance;
 
-public class Obdelnik extends Ctverec {
+public class Rectangle extends Square {
 
     public int b;
 
     @Override
-    public int getPovrch() {
+    public int getSurface() {
         return a * b;
     }
 }

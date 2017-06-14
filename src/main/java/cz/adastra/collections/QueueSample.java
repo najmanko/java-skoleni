@@ -20,7 +20,6 @@ public class QueueSample {
 
         Deque<Integer> deque = new ArrayDeque<>();
 
-        //ZISTIT KDE JE PROBLEM!!!!!!!!!!!!
         System.out.println("Dequeue");
         deque.add(1);
         deque.add(2);

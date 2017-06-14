@@ -39,7 +39,6 @@ public class TreeMapSample {
     }
 
     private void backwardTreeMap() {
-        //lambda here!
         Map<Integer, String> map = new TreeMap<>((o1, o2) -> o2.compareTo(o1));
         fillMap(map);
         printMap(map);

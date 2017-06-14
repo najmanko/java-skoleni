@@ -5,7 +5,7 @@ public class Calculator {
     private double actual = 0;
 
     public static void main(String[] args) {
-        System.out.println("Ahoj, budeme pisat kalkulacku");
+        System.out.println("This is calculator");
 
         Calculator calculator = new Calculator();
         calculator.plus(8);
@@ -46,7 +46,7 @@ public class Calculator {
     }
 
     private void printCalculation(String character, int number) {
-        System.out.print(String.format("%s %s %S", this.actual, character, number));
+        System.out.print(String.format("%s %s %s", this.actual, character, number));
     }
 
     private void printResult() {

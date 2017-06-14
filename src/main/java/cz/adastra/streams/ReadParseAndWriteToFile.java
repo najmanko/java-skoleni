@@ -12,10 +12,10 @@ public class ReadParseAndWriteToFile {
 
         List<String> input =
                 readParseAndWriteToFile.readFile(
-                        "C:\\temp\\cisla.txt");
+                        "C:\\temp\\numbers.txt");
 
         readParseAndWriteToFile.parseAndWrite(input,
-                "C:\\temp\\cisla_vystup.txt");
+                "C:\\temp\\numbers_output.txt");
     }
 
     private List<String> readFile(String path) {
