@@ -1,8 +1,6 @@
 package cz.adastra.collections;
 
-import java.util.Comparator;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class TreeMapSample {
 
@@ -14,34 +12,50 @@ public class TreeMapSample {
 
         System.out.println("backwardTreeMap:");
         sample.backwardTreeMap();
+
+        System.out.println("hashMap:");
+        sample.createHashMap();
+
+        System.out.println("linkedHashMap:");
+        sample.createLinkedHashMap();
+    }
+
+    private void createLinkedHashMap() {
+        Map<Integer, String> map = new LinkedHashMap<>();
+        fillMap(map);
+        printMap(map);
+    }
+
+    private void createHashMap() {
+        Map<Integer, String> map = new HashMap<>();
+        fillMap(map);
+        printMap(map);
     }
 
     private void simpleTreeMap() {
-        Map<Integer, String> map = new TreeMap<Integer, String>();
+        Map<Integer, String> map = new TreeMap<>();
         fillMap(map);
         printMap(map);
     }
 
     private void backwardTreeMap() {
-        Map<Integer, String> map = new TreeMap<Integer, String>(new Comparator<Integer>() { //lambda here!
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                return o2.compareTo(o1);
-            }
-        });
+        //lambda here!
+        Map<Integer, String> map = new TreeMap<>((o1, o2) -> o2.compareTo(o1));
         fillMap(map);
         printMap(map);
     }
 
     private void printMap(Map<Integer, String> map) {
         for(Integer key : map.keySet()){
-            System.out.println(map.get(key));
+            System.out.println(key + ": " + map.get(key));
         }
     }
 
     private void fillMap(Map map) {
         map.put(2, "two");
         map.put(3, "three");
-        map.put(1, "one");
+        map.put(7, "seven");
+        map.put(4, "four");
+        map.put(11, "one");
     }
 }
