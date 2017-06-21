@@ -10,34 +10,38 @@ public class ReadParseAndWriteToFile {
         ReadParseAndWriteToFile readParseAndWriteToFile =
                 new ReadParseAndWriteToFile();
 
-        List<String> input =
-                readParseAndWriteToFile.readFile(
-                        "C:\\temp\\numbers.txt");
+        List<Integer> numbers = readParseAndWriteToFile.
+                readFileData("C:\\temp\\numbers.txt");
 
-        readParseAndWriteToFile.parseAndWrite(input,
+        readParseAndWriteToFile.writeToFile(numbers,
                 "C:\\temp\\numbers_output.txt");
     }
 
-    private List<String> readFile(String path) {
+    private List<Integer> readFileData(String path) {
         BufferedReader br = null;
         FileReader fr = null;
-        List<String> list = new ArrayList<>();
-
+        List<Integer> list = new ArrayList<>();
         try {
             fr = new FileReader(path);
             br = new BufferedReader(fr);
 
-            String line = br.readLine();
+            String line = null;
+            line = br.readLine();
             while (line != null) {
-                list.add(line);
+                Integer number = Integer.parseInt(line);
+                if (number % 2 == 0) {
+                    list.add(number);
+                }
                 line = br.readLine();
             }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
             try {
-                fr.close();
                 br.close();
+                fr.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -45,7 +49,7 @@ public class ReadParseAndWriteToFile {
         return list;
     }
 
-    private void parseAndWrite(List<String> list, String file) {
+    private void writeToFile(List<Integer> list, String file) {
 
         FileWriter fw = null;
         BufferedWriter bw = null;
@@ -53,13 +57,9 @@ public class ReadParseAndWriteToFile {
             fw = new FileWriter(file);
             bw = new BufferedWriter(fw);
 
-            for (String string : list) {
-                //parse values
-                int number = Integer.parseInt(string);
-                if (number % 2 == 0) {
-                    bw.write(string);
-                    bw.write("\r\n");
-                }
+            for (Integer i : list) {
+                bw.write(i.toString());
+                bw.write("\r\n");
             }
         } catch (IOException e) {
             e.printStackTrace();

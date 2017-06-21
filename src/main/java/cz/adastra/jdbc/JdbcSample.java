@@ -24,7 +24,7 @@ public class JdbcSample {
             stmt.executeUpdate("CREATE TABLE STUDENT (" +
                     "         ID           NUMBER(5) PRIMARY KEY," +
                     "         NAME         VARCHAR2(15) NOT NULL," +
-                    "         SURNAME      VARCHAR2(20) NOT NULL," +
+                    "         SURNAME      VARCHAR2(20) NOT NULL,\n" +
                     "         AGE          NUMBER(3)\n" +
                     "         );");
             stmt.executeUpdate("INSERT INTO STUDENT VALUES (1, 'Jan', 'Nepomuk', 387);");
@@ -32,21 +32,17 @@ public class JdbcSample {
             stmt.executeUpdate("INSERT INTO STUDENT VALUES (3, 'Milos', 'Zeman', 70);");
             stmt.executeUpdate("INSERT INTO STUDENT VALUES (4, 'Petr', 'Maly', 5);");
 
+            //read from TABLE
             String sql = "SELECT id, name, surname, age FROM STUDENT";
             System.out.println(sql + ":");
 
             ResultSet rs = stmt.executeQuery(sql);
 
             while (rs.next()) {
-                int id = rs.getInt("id");
-                int age = rs.getInt("age");
-                String first = rs.getString("name");
-                String last = rs.getString("surname");
-
-                System.out.print("ID: " + id);
-                System.out.print(",\t Age: " + age);
-                System.out.print(",\t First: " + first);
-                System.out.println(",\t Last: " + last);
+                System.out.print("ID: " + rs.getInt("id"));
+                System.out.print(",\t Age: " + rs.getInt("age"));
+                System.out.print(",\t First: " + rs.getString("name"));
+                System.out.println(",\t Last: " + rs.getString("surname"));
             }
             rs.close();
             stmt.close();

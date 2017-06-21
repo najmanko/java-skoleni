@@ -1,7 +1,6 @@
 package cz.adastra.threads;
 
-class RunnableDemo implements Runnable {
-    private Thread t;
+class RunnableDemo extends Thread {
     private String threadName;
 
     RunnableDemo(String name) {
@@ -20,13 +19,5 @@ class RunnableDemo implements Runnable {
             System.out.println("Thread " + threadName + " interrupted.");
         }
         System.out.println("Thread " + threadName + " finished.");
-    }
-
-    public void start() {
-        System.out.println("Starting " + threadName);
-        if (t == null) {
-            t = new Thread(this, threadName);
-            t.start();
-        }
     }
 }

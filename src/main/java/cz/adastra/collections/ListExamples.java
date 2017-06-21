@@ -36,7 +36,7 @@ public class ListExamples {
     }
 
     private void newUsageAfterJava5() {
-        List<Integer> integerList = new ArrayList<Integer>();
+        List<Integer> integerList = new ArrayList<>();
 
         integerList.add(6);
         integerList.add(-10);
