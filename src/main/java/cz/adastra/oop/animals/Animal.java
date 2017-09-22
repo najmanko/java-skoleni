@@ -1,4 +1,4 @@
-package cz.adastra.oop;
+package cz.adastra.oop.animals;
 
 public interface Animal {
 

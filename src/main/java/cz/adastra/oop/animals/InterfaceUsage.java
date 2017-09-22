@@ -1,4 +1,4 @@
-package cz.adastra.oop;
+package cz.adastra.oop.animals;
 
 import java.util.ArrayList;
 import java.util.List;
